@@ -10,9 +10,8 @@ if ( have_posts() ):
 
 		echo '<h1>' . get_the_title() . '</h1>';
 
-		the_excerpt();
+		the_content();
 
-		echo '<a href="' . get_the_permalink() . '">' . get_the_permalink() . '</a>';
 
 	endwhile;
 
