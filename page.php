@@ -2,28 +2,20 @@
 get_header();
 ?>
 
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-					<?php echo get_the_title(); ?>
-                </h1>
-
-            </div>
-        </div>
-    </section>
+    <div class="medium-8 columns">
+        <h1><?php echo get_the_title(); ?></h1>
 
 
-    <section class="section">
-        <div class="container">
-
+        <section>
 			<?php
 
 			if ( have_posts() ):
 				while ( have_posts() ) : the_post();
-
-					the_content();
-
+					?>
+                    <article>
+						<?php the_content(); ?>
+                    </article>
+					<?php
 				endwhile;
 
 			else :
@@ -31,12 +23,15 @@ get_header();
 			endif;
 
 			?>
+        </section>
+    </div>
 
-            <aside>
-				<?php get_sidebar(); ?>
-            </aside>
-        </div>
-    </section>
+    <div class="medium-3 columns" data-sticky-container>
+        <aside class="sticky" data-sticky data-margin-top="8">
+			<?php get_sidebar(); ?>
+        </aside>
+    </div>
+
 
 <?php
 get_footer();

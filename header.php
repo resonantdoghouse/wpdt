@@ -10,23 +10,25 @@
 <body <?php body_class( 'c-text' ); ?> data-feedly-mini="yes">
 
 
-<header class="container">
+<header class="header">
 
-
-    <nav class="nav">
-        <div class="nav-left">
-			<?php echo '<a class="nav-item" href="' . get_home_url() . '">' . get_bloginfo( 'name' ) . '</a>'; ?>
+    <nav class="top-bar">
+        <div class="top-bar-title">
+			<?php echo '<a class="pure-menu-heading pure-menu-link" href="' . get_home_url() . '">' . get_bloginfo( 'name' ) . '</a>'; ?>
         </div>
 
+        <div class="top-bar-right">
 		<?php if ( has_nav_menu( 'primary' ) ) :
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
-				'menu_class'     => 'nav-right',
-				'container'      => false,
-				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+				'menu_class'     => 'menu',
+				'container'      => false
 			) );
 		endif; ?>
+        </div>
     </nav>
 
 </header>
+
+
 

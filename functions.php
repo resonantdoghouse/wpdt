@@ -20,4 +20,5 @@ include( get_template_directory() . '/includes/widgets.php' );
 add_action( 'wp_enqueue_scripts', 'wpdt_enqueue' );
 add_action( 'after_setup_theme', 'wpdt_setup_theme' );
 add_filter( 'nav_menu_css_class', 'wpdt_menuitem_classes', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'wpdt_add_class_link_menu_items', 10, 3 );
 add_action( 'widgets_init', 'wpdt_widgets' );
