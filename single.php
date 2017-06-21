@@ -2,27 +2,41 @@
 get_header();
 ?>
 
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+					<?php echo get_the_title(); ?>
+                </h1>
 
-<?php
+            </div>
+        </div>
+    </section>
 
-if ( have_posts() ):
-	while ( have_posts() ) : the_post();
 
-		echo '<h1>' . get_the_title() . '</h1>';
+    <section class="section">
+        <div class="container">
+			<?php
 
-		the_content();
+			if ( have_posts() ):
+				while ( have_posts() ) : the_post();
 
-	endwhile;
 
-else :
-	_e( 'Sorry, no posts were found.', 'wpt' );
-endif;
+					the_content();
 
-?>
+				endwhile;
 
-    <aside>
-		<?php get_sidebar(); ?>
-    </aside>
+			else :
+				_e( 'Sorry, no posts were found.', 'wpt' );
+			endif;
+
+			?>
+
+            <aside>
+				<?php get_sidebar(); ?>
+            </aside>
+        </div>
+    </section>
 
 
 <?php

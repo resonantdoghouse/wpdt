@@ -10,7 +10,7 @@
 <body <?php body_class( 'c-text' ); ?> data-feedly-mini="yes">
 
 
-<header>
+<header class="container">
 
 
     <nav class="nav">
@@ -30,18 +30,3 @@
 
 </header>
 
-<section class="hero is-primary">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                Primary title
-            </h1>
-            <h2 class="subtitle">
-                Primary subtitle
-            </h2>
-        </div>
-    </div>
-</section>
-
-
-<div class="container">
